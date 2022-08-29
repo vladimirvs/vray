@@ -1,4 +1,4 @@
-package org.example;
+package com.vvirlan;
 
 import io.cucumber.java.en.*;
 
@@ -17,5 +17,6 @@ public class StepDefinitions {
     @Then("the scenario passes")
     public void theScenarioPasses() {
     }
+
 
 }
