@@ -21,11 +21,11 @@ public class Tuple {
         this.w = w;
     }
 
-    public static Tuple point(float x, float y, float z) {
+    public static Tuple point(double x, double y, double z) {
         return new Tuple(x, y, z, W_POINT_1);
     }
 
-    public static Tuple vector(float x, float y, float z) {
+    public static Tuple vector(double x, double y, double z) {
         return new Tuple(x, y, z, W_VECTOR_0);
     }
 
@@ -73,6 +73,16 @@ public class Tuple {
         return a.x * b.x + a.y * b.y + a.z * b.z + a.w * b.w;
     }
 
+    public static Tuple cross(Tuple a, Tuple b) {
+//        function cross(a, b)
+//        return vector(a.y * b.z - a.z * b.y,
+//                a.z * b.x - a.x * b.z,
+//                a.x * b.y - a.y * b.x)
+//        end function
+
+        return Tuple.vector(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -88,7 +98,7 @@ public class Tuple {
 
     @Override
     public String toString() {
-        return "Tuple{" +
+        return "{" +
                 "x=" + x +
                 ", y=" + y +
                 ", z=" + z +

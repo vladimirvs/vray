@@ -1,5 +1,6 @@
 package com.vvirlan;
 
+import com.vvirlan.model.Color;
 import com.vvirlan.model.Tuple;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -17,6 +18,7 @@ public class TupleSteps {
 
     private Tuple tuple;
     private Map<String, Tuple> tuples = new HashMap<>();
+    private Map<String, Color> colors = new HashMap<>();
 
     @Given("{word} ← tuple\\({float}, {float}, {float}, {float})")
     public void aTuple(String variable, float x, float y, float z, float w) {
@@ -190,6 +192,89 @@ public class TupleSteps {
     @Then("dot\\({word}, {word}) = {double}")
     public void dotAB(String keyA, String keyB, double res) {
 
-       assertEquals(res, Tuple.dot(tuples.get(keyA), tuples.get(keyB)));
+        assertEquals(res, Tuple.dot(tuples.get(keyA), tuples.get(keyB)));
     }
+
+    @Then("cross\\({word}, {word}) = vector\\({double}, {double}, {double})")
+    public void crossABVector(String a, String b, double x, double y, double z) {
+
+        Tuple ta = tuples.get(a);
+        Tuple tb = tuples.get(b);
+
+        Tuple cp = Tuple.cross(ta, tb);
+        assertEquals(x, cp.x);
+        assertEquals(y, cp.y);
+        assertEquals(z, cp.z);
+
+    }
+
+    @Given("{word} ← color\\({double}, {double}, {double})")
+    public void cColor(String key, double r, double g, double b) {
+
+        Color col = new Color(r, g, b);
+        colors.put(key, col);
+    }
+
+    @Then("{word}.red = {double}")
+    public void cRed(String key, double val) {
+        Color col = colors.get(key);
+        assertEquals(val, col.red);
+    }
+
+    @And("{word}.green = {double}")
+    public void cGreen(String key, double val) {
+        Color col = colors.get(key);
+        assertEquals(val, col.green);
+    }
+
+    @And("{word}.blue = {double}")
+    public void cBlue(String key, double val) {
+        Color col = colors.get(key);
+        assertEquals(val, col.blue);
+    }
+
+    @Then("{word} + {word} = color\\({double}, {double}, {double})")
+    public void sumColor(String key1, String key2, double r, double g, double b) {
+        Color c1 = colors.get(key1);
+        Color c2 = colors.get(key2);
+        Color sum = Color.add(c1, c2);
+        assertEquals(r, sum.red);
+        assertEquals(g, sum.green);
+        assertEquals(b, sum.blue);
+
+    }
+
+    @Then("{word} - {word} = color\\({double}, {double}, {double})")
+    public void subColor(String key1, String key2, double r, double g, double b) {
+        Color c1 = colors.get(key1);
+        Color c2 = colors.get(key2);
+        Color dif = Color.sub(c1, c2);
+        assertEquals(r, dif.red, EPSILON);
+        assertEquals(g, dif.green, EPSILON);
+        assertEquals(b, dif.blue, EPSILON);
+
+    }
+
+    @Then("{word} * {double} = color\\({double}, {double}, {double})")
+    public void mulColor(String key1, double scalar, double r, double g, double b) {
+        Color c1 = colors.get(key1);
+        Color mul = Color.mul(c1, scalar);
+        assertEquals(r, mul.red, EPSILON);
+        assertEquals(g, mul.green, EPSILON);
+        assertEquals(b, mul.blue, EPSILON);
+
+    }
+
+    @Then("dot\\({word} , {word}) = color\\({double}, {double}, {double})")
+    public void mulColor(String key1, String key2, double r, double g, double b) {
+        Color c1 = colors.get(key1);
+        Color c2 = colors.get(key2);
+        Color mul = Color.dot(c1, c2);
+        assertEquals(r, mul.red, EPSILON);
+        assertEquals(g, mul.green, EPSILON);
+        assertEquals(b, mul.blue, EPSILON);
+
+    }
+
+
 }
