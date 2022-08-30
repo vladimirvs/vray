@@ -5,17 +5,21 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TupleSteps {
 
     private Tuple tuple;
+    private Map<String, Tuple> tuples = new HashMap<>();
 
-    @Given("a ← tuple\\({float}, {float}, {float}, {float})")
-    public void aTuple(float x, float y, float z, float w) {
-        System.out.println("given");
+    @Given("{word} ← tuple\\({float}, {float}, {float}, {float})")
+    public void aTuple(String variable, float x, float y, float z, float w) {
         tuple = new Tuple(x, y, z, w);
+        tuples.put(variable, tuple);
     }
 
     @Then("a.x = {float}")
@@ -38,23 +42,53 @@ public class TupleSteps {
         assertEquals(tuple.w, w);
     }
 
-    @And("a is a point")
-    public void aIsAPoint() {
+    @And("{word} is a point")
+    public void aIsAPoint(String key) {
         assertTrue(tuple.isPoint());
     }
 
-    @And("a is not a vector")
-    public void aIsNotAVector() {
+    @And("{word} is not a vector")
+    public void aIsNotAVector(String key) {
         assertFalse(tuple.isVector());
     }
 
-    @And("a is not a point")
-    public void aIsNotAPoint() {
+    @And("{word} is not a point")
+    public void aIsNotAPoint(String key) {
         assertFalse(tuple.isPoint());
     }
 
-    @And("a is a vector")
-    public void aIsAVector() {
+    @And("{word} is a vector")
+    public void aIsAVector(String key) {
         assertTrue(tuple.isVector());
+    }
+
+    @Given("{word} ← point\\({float}, {float}, {float})")
+    public void pPoint(String key, float x, float y, float z) {
+        tuple = Tuple.point(x, y, z);
+    }
+
+    @Then("{word} = tuple\\({float}, {float}, {float}, {float})")
+    public void pTuple(String key, float x, float y, float z, float w) {
+        assertEquals(x, tuple.x);
+        assertEquals(y, tuple.y);
+        assertEquals(z, tuple.z);
+        assertEquals(w, tuple.w);
+    }
+
+    @Given("{word} ← vector\\({float}, {float}, {float})")
+    public void vVector(String key, float x, float y, float z) {
+        tuple = Tuple.vector(x, y, z);
+    }
+
+
+    @Then("{word} + {word} = tuple\\({float}, {float}, {float}, {float})")
+    public void aATuple(String keyA, String keyB, float x, float y, float z, float w) {
+        Tuple ta = tuples.get(keyA);
+        Tuple tb = tuples.get(keyB);
+        Tuple sum = Tuple.add(ta, tb);
+        assertEquals(x, sum.x);
+        assertEquals(y, sum.y);
+        assertEquals(z, sum.z);
+        assertEquals(w, sum.w);
     }
 }
