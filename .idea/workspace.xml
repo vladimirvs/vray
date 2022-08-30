@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e3625f31-6ec9-49c3-9e3e-3fe15b6bdfde" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Tuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Tuple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/vvirlan/TupleSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvirlan/TupleSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/com/vvirlan/tuples.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/vvirlan/tuples.feature" afterDir="false" />
