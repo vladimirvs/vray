@@ -27,4 +27,14 @@ public class Color {
     public static Color mul(Color c1, double scalar) {
         return new Color(c1.red * scalar, c1.green * scalar, c1.blue * scalar);
     }
+
+    public String asString() {
+        return clamp(red) + " " + clamp(green) + " " + clamp(blue);
+    }
+
+    private int clamp(double d) {
+        if (d > 1.0d) return 255;
+        if (d < 0.0d) return 0;
+        return (int) Math.round(255 * d);
+    }
 }

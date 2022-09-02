@@ -1,5 +1,6 @@
 package com.vvirlan;
 
+import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.*;
 
 import org.junit.jupiter.api.Assertions.*;
@@ -17,6 +18,5 @@ public class StepDefinitions {
     @Then("the scenario passes")
     public void theScenarioPasses() {
     }
-
 
 }

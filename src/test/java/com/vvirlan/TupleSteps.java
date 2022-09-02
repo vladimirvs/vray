@@ -13,12 +13,10 @@ import java.util.Map;
 import static com.vvirlan.model.Constants.EPSILON;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static com.vvirlan.StepContext.*;
 
 public class TupleSteps {
 
-    private Tuple tuple;
-    private Map<String, Tuple> tuples = new HashMap<>();
-    private Map<String, Color> colors = new HashMap<>();
 
     @Given("{word} ← tuple\\({float}, {float}, {float}, {float})")
     public void aTuple(String variable, float x, float y, float z, float w) {
@@ -210,7 +208,6 @@ public class TupleSteps {
 
     @Given("{word} ← color\\({double}, {double}, {double})")
     public void cColor(String key, double r, double g, double b) {
-
         Color col = new Color(r, g, b);
         colors.put(key, col);
     }
