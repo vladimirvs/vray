@@ -84,12 +84,12 @@ public class CanvasSteps {
         String[] expectedLines = expLines.split("\n");
 
         int offset = 0;
-        if (expectedLines.length < from) {
+        if (expectedLines.length <= from) {
             offset = HEADER_SIZE;
         }
 
         int finalOffset = offset;
-        IntStream.range(from,to).forEach(i -> {
+        IntStream.range(from, to).forEach(i -> {
             String exp = expectedLines[i - 1 - finalOffset];
             String act = lines[i - 1];
             assertEquals(exp, act);
@@ -102,5 +102,12 @@ public class CanvasSteps {
 //            assertEquals(exp, act);
 //
 //        }
+    }
+
+    @When("every pixel of {word} is set to color\\({double}, {double}, {double})")
+    public void everyPixelOfCIsSetToColor(String canvasKey, double r, double g, double b) {
+        Canvas canvas = canvases.get(canvasKey);
+        canvas.init(r, g, b);
+
     }
 }
