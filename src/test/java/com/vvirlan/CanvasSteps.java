@@ -13,6 +13,7 @@ import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static com.vvirlan.StepContext.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CanvasSteps {
 
@@ -108,6 +109,17 @@ public class CanvasSteps {
     public void everyPixelOfCIsSetToColor(String canvasKey, double r, double g, double b) {
         Canvas canvas = canvases.get(canvasKey);
         canvas.init(r, g, b);
+
+    }
+
+    @Then("{word} ends with a newline character")
+    public void ppmEndsWithANewlineCharacter(String ppmKey) {
+        String ppm = ppms.get(ppmKey);
+        assertTrue (ppm.endsWith(System.lineSeparator()));
+    }
+
+    @Given("{word} ← normalize\\(vector\\({int}, {double}, {int})) * {double}")
+    public void velocityNormalizeVector(String varName, int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
 
     }
 }

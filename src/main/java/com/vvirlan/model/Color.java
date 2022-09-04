@@ -37,4 +37,13 @@ public class Color {
         if (d < 0.0d) return 0;
         return (int) Math.round(255 * d);
     }
+
+    @Override
+    public String toString() {
+        return "Color{" +
+                "red=" + red +
+                ", green=" + green +
+                ", blue=" + blue +
+                '}';
+    }
 }

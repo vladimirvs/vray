@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3625f31-6ec9-49c3-9e3e-3fe15b6bdfde" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MatrixSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vvirlan/Big.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/vvirlan/CanvasSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvirlan/CanvasSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vvirlan/StepContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvirlan/StepContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/com/vvirlan/canvas.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/vvirlan/canvas.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/com/vvirlan/example.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/vvirlan/example.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +60,38 @@
     </key>
   </component>
   <component name="RunManager" selected="Cucumber Java.All Features in: vvirlan">
+    <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vvirlan.model.World" />
+      <module name="vray" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vvirlan.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All Features in: resources" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources" />
+      <option name="GLUE" value="com.vvirlan" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="vray" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="All Features in: resources" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All Features in: vvirlan" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan" />
@@ -71,13 +111,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: canvas" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: matrices" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/canvas.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="vray" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: canvas" />
+      <option name="SUGGESTED_NAME" value="Feature: matrices" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -89,55 +129,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Constructing the PPM header" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Example from the book" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/canvas.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/example.feature" />
       <option name="GLUE" value="com.vvirlan" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="vray" />
-      <option name="NAME_FILTER" value="^Constructing the PPM header$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Constructing the PPM header$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Constructing the PPM header" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Constructing the PPM pixel data" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/canvas.feature" />
-      <option name="GLUE" value="com.vvirlan" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="vray" />
-      <option name="NAME_FILTER" value="^Constructing the PPM pixel data$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Constructing the PPM pixel data$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Constructing the PPM pixel data" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Splitting long lines in PPM files" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/canvas.feature" />
-      <option name="GLUE" value="com.vvirlan" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="vray" />
-      <option name="NAME_FILTER" value="^Splitting long lines in PPM files$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Splitting long lines in PPM files$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Splitting long lines in PPM files" />
+      <option name="NAME_FILTER" value="^Example from the book$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Example from the book$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Example from the book" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -152,10 +152,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.All Features in: vvirlan" />
-        <item itemvalue="Cucumber Java.Scenario: Splitting long lines in PPM files" />
-        <item itemvalue="Cucumber Java.Scenario: Constructing the PPM pixel data" />
-        <item itemvalue="Cucumber Java.Scenario: Constructing the PPM header" />
-        <item itemvalue="Cucumber Java.Feature: canvas" />
+        <item itemvalue="Cucumber Java.Feature: matrices" />
+        <item itemvalue="Cucumber Java.Scenario: Example from the book" />
+        <item itemvalue="Cucumber Java.All Features in: resources" />
+        <item itemvalue="Application.World" />
       </list>
     </recent_temporary>
   </component>
@@ -186,38 +186,43 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/World.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/World.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/World.java</url>
-          <line>11</line>
+          <line>17</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/World.java</url>
-          <line>13</line>
+          <line>19</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/CanvasSteps.java</url>
-          <line>101</line>
+          <line>102</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/CanvasSteps.java</url>
-          <line>94</line>
+          <line>95</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/CanvasSteps.java</url>
-          <line>93</line>
+          <line>94</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Canvas.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/MatrixSteps.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/MatrixSteps.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

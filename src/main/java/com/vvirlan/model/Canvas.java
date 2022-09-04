@@ -31,7 +31,6 @@ public class Canvas {
 
     public String toPpm() {
         StringBuilder header = getHeader();
-
         StringBuilder body = new StringBuilder();
 
         for (int r = 0; r < height; r++) {
