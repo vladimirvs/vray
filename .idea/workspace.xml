@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3625f31-6ec9-49c3-9e3e-3fe15b6bdfde" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MatrixSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vvirlan/Big.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vvirlan/CanvasSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvirlan/CanvasSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vvirlan/StepContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvirlan/StepContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/com/vvirlan/canvas.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/vvirlan/canvas.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/com/vvirlan/example.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/vvirlan/example.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,13 +207,13 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/MatrixSteps.java</url>
-          <line>17</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java</url>
+          <line>19</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/MatrixSteps.java</url>
-          <line>21</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java</url>
+          <line>23</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>

@@ -1,6 +1,7 @@
 package com.vvirlan;
 
 import com.vvirlan.model.Matrix;
+import com.vvirlan.model.Tuple;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
@@ -10,6 +11,7 @@ import io.cucumber.java.it.Ma;
 import java.util.List;
 
 import static com.vvirlan.StepContext.matrices;
+import static com.vvirlan.StepContext.tuples;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
@@ -90,6 +92,34 @@ public class MatrixSteps {
         System.out.println(matrix);
         assertEquals(matrix, C);
 
+
+    }
+
+    @Then("{word} * {word} = tuple\\({int}, {int}, {int}, {int})")
+    public void aBTuple(String aKey, String bKey, int x, int y, int z, int w) {
+        Matrix matrix = matrices.get(aKey);
+        Tuple tuple = tuples.get(bKey);
+        Tuple mul = Matrix.mul(matrix, tuple);
+        assertEquals(new Tuple(x,y,z,w), mul);
+    }
+
+    @Then("{word} * identity_matrix = {word}")
+    public void aIdentity_matrixA(String aKey, String bKey) {
+        Matrix a = matrices.get(aKey);
+        Matrix expected = matrices.get(bKey);
+
+        Matrix identity = Matrix.identity(a.rows);
+        System.out.println(identity);
+        assertEquals(expected, Matrix.mul(a, identity));
+
+
+    }
+
+    @Then("identity_matrix * {word} = {word}")
+    public void identity_matrixAA(String aKey, String bKey) {
+        Tuple a = tuples.get(aKey);
+        Matrix identity = Matrix.identity(4);
+        assertEquals(a , Matrix.mul(identity, a));
 
     }
 }

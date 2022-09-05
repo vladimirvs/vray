@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Matrix {
-    private int rows;
-    private int cols;
+    public int rows;
+    public int cols;
 
     private float[][] data;
 
@@ -13,6 +13,15 @@ public class Matrix {
         this.rows = rows;
         this.cols = cols;
         data = new float[rows][cols];
+    }
+
+    public static Tuple mul(Matrix a, Tuple b) {
+        double x = a.data[0][0] * b.x + a.data[0][1] * b.y + a.data[0][2] * b.z + a.data[0][3] * b.w;
+        double y = a.data[1][0] * b.x + a.data[1][1] * b.y + a.data[1][2] * b.z + a.data[1][3] * b.w;
+        double z = a.data[2][0] * b.x + a.data[2][1] * b.y + a.data[2][2] * b.z + a.data[2][3] * b.w;
+        double w = a.data[3][0] * b.x + a.data[3][1] * b.y + a.data[3][2] * b.z + a.data[3][3] * b.w;
+        Tuple res = new Tuple(x, y, z, w);
+        return res;
     }
 
     public static Matrix mul(Matrix a, Matrix b) {
@@ -26,6 +35,14 @@ public class Matrix {
             }
         }
         return p;
+    }
+
+    public static Matrix identity(int rows) {
+        Matrix a = new Matrix(rows, rows);
+        for (int r = 0; r < rows; r++) {
+                a.put(r, r, 1.0f);
+        }
+        return a;
     }
 
     public float at(int r, int c) {
