@@ -122,4 +122,35 @@ public class MatrixSteps {
         assertEquals(a , Matrix.mul(identity, a));
 
     }
+
+    @Then("transpose\\({word}) is the following matrix:")
+    public void transposeAIsTheFollowingMatrix(String aKey, DataTable dataTable) {
+        Matrix a = matrices.get(aKey);
+        List<List<String>> lists = dataTable.asLists();
+        Matrix matrix = new Matrix(a.rows, a.cols);
+
+        for (int r = 0; r < lists.size(); r++) {
+            for (int c = 0; c < lists.get(0).size(); c++) {
+                matrix.put(r, c, Float.parseFloat(lists.get(r).get(c)));
+            }
+        }
+
+        Matrix transpose = Matrix.transpose(a);
+
+        System.out.println(matrix);
+        System.out.println(transpose);
+        assertEquals(matrix, transpose);
+    }
+
+    @Given("{word} ← transpose\\(identity_matrix)")
+    public void aTransposeIdentity_matrix(String aKey) {
+        Matrix a = Matrix.transpose(Matrix.identity(4));
+        matrices.put(aKey, a);
+    }
+
+    @Then("{word} = identity_matrix")
+    public void aIdentity_matrix(String aKey) {
+        Matrix a = matrices.get(aKey);
+        assertEquals(Matrix.identity(4), a);
+    }
 }

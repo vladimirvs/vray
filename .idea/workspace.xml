@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3625f31-6ec9-49c3-9e3e-3fe15b6bdfde" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" afterDir="false" />
@@ -40,6 +39,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/work/calc&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
@@ -52,19 +52,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Cucumber Java.All Features in: vvirlan">
-    <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.vvirlan.model.World" />
-      <module name="vray" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vvirlan.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All Features in: resources" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources" />
@@ -141,13 +128,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: Transposing the identity matrix" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" />
+      <option name="GLUE" value="com.vvirlan" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="vray" />
+      <option name="NAME_FILTER" value="^Transposing the identity matrix$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Transposing the identity matrix$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Transposing the identity matrix" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.All Features in: vvirlan" />
+        <item itemvalue="Cucumber Java.Scenario: Transposing the identity matrix" />
         <item itemvalue="Cucumber Java.Feature: matrices" />
         <item itemvalue="Cucumber Java.Scenario: Example from the book" />
         <item itemvalue="Cucumber Java.All Features in: resources" />
-        <item itemvalue="Application.World" />
       </list>
     </recent_temporary>
   </component>

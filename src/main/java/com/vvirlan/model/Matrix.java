@@ -40,9 +40,19 @@ public class Matrix {
     public static Matrix identity(int rows) {
         Matrix a = new Matrix(rows, rows);
         for (int r = 0; r < rows; r++) {
-                a.put(r, r, 1.0f);
+            a.put(r, r, 1.0f);
         }
         return a;
+    }
+
+    public static Matrix transpose(Matrix matrix) {
+        Matrix trans = new Matrix(matrix.rows, matrix.cols);
+        for (int r = 0; r < matrix.rows; r++) {
+            for (int c = 0; c < matrix.cols; c++) {
+                trans.put(c, r, matrix.at(r, c));
+            }
+        }
+        return trans;
     }
 
     public float at(int r, int c) {
