@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3625f31-6ec9-49c3-9e3e-3fe15b6bdfde" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" afterDir="false" />
@@ -52,25 +53,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Cucumber Java.All Features in: vvirlan">
-    <configuration name="All Features in: resources" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources" />
-      <option name="GLUE" value="com.vvirlan" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="vray" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="All Features in: resources" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All Features in: vvirlan" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan" />
@@ -108,15 +90,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Example from the book" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: A submatrix of a 3x3 matrix is a 2x2 matrix" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/example.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" />
       <option name="GLUE" value="com.vvirlan" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="vray" />
-      <option name="NAME_FILTER" value="^Example from the book$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Example from the book$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Example from the book" />
+      <option name="NAME_FILTER" value="^A submatrix of a 3x3 matrix is a 2x2 matrix$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^A submatrix of a 3x3 matrix is a 2x2 matrix$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: A submatrix of a 3x3 matrix is a 2x2 matrix" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Calculating a minor of a 3x3 matrix" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" />
+      <option name="GLUE" value="com.vvirlan" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="vray" />
+      <option name="NAME_FILTER" value="^Calculating a minor of a 3x3 matrix$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Calculating a minor of a 3x3 matrix$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Calculating a minor of a 3x3 matrix" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -151,10 +153,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.All Features in: vvirlan" />
-        <item itemvalue="Cucumber Java.Scenario: Transposing the identity matrix" />
+        <item itemvalue="Cucumber Java.Scenario: A submatrix of a 3x3 matrix is a 2x2 matrix" />
         <item itemvalue="Cucumber Java.Feature: matrices" />
-        <item itemvalue="Cucumber Java.Scenario: Example from the book" />
-        <item itemvalue="Cucumber Java.All Features in: resources" />
+        <item itemvalue="Cucumber Java.Scenario: Calculating a minor of a 3x3 matrix" />
+        <item itemvalue="Cucumber Java.Scenario: Transposing the identity matrix" />
       </list>
     </recent_temporary>
   </component>
@@ -215,13 +217,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java</url>
-          <line>19</line>
+          <line>20</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java</url>
-          <line>23</line>
+          <line>24</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -9,6 +9,7 @@ public class Matrix {
 
     private float[][] data;
 
+
     public Matrix(int rows, int cols) {
         this.rows = rows;
         this.cols = cols;
@@ -53,6 +54,41 @@ public class Matrix {
             }
         }
         return trans;
+    }
+
+    public static int determinant(Matrix A) {
+        float a = A.data[0][0];
+        float b = A.data[0][1];
+        float c = A.data[1][0];
+        float d = A.data[1][1];
+        float det = a * d - b * c;
+        return Math.round(det);
+
+    }
+
+    public static Matrix submatrix(Matrix a, int row, int col) {
+
+        Matrix sub = new Matrix(a.rows - 1, a.cols - 1);
+
+        int sr = 0;
+        int sc = 0;
+        for (int r = 0; r < a.rows; r++) {
+            if (r == row) {
+                continue;
+            }
+
+            for (int c = 0; c < a.cols; c++) {
+                if (c == col) {
+                    continue;
+                }
+
+                sub.put(sr, sc, a.data[r][c]);
+                sc++;
+            }
+            sc = 0;
+            sr++;
+        }
+        return sub;
     }
 
     public float at(int r, int c) {
