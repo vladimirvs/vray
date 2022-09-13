@@ -1,9 +1,12 @@
 package com.vvirlan.model;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 import java.util.Objects;
 
 public class Matrix {
+    public static final int SCALE = 5;
     public int rows;
     public int cols;
 
@@ -57,19 +60,25 @@ public class Matrix {
     }
 
     public static int determinant(Matrix A) {
-        float a = A.data[0][0];
-        float b = A.data[0][1];
-        float c = A.data[1][0];
-        float d = A.data[1][1];
-        float det = a * d - b * c;
-        return Math.round(det);
+        if (A.cols == 2) {
+            float a = A.data[0][0];
+            float b = A.data[0][1];
+            float c = A.data[1][0];
+            float d = A.data[1][1];
+            float det = a * d - b * c;
+            return Math.round(det);
+        } else {
+            float det = 0;
+            for (int c = 0; c < A.cols; c++) {
+                det += A.data[0][c] * cofactor(A, 0, c);
+            }
+            return Math.round(det);
+        }
 
     }
 
     public static Matrix submatrix(Matrix a, int row, int col) {
-
         Matrix sub = new Matrix(a.rows - 1, a.cols - 1);
-
         int sr = 0;
         int sc = 0;
         for (int r = 0; r < a.rows; r++) {
@@ -81,7 +90,6 @@ public class Matrix {
                 if (c == col) {
                     continue;
                 }
-
                 sub.put(sr, sc, a.data[r][c]);
                 sc++;
             }
@@ -89,6 +97,38 @@ public class Matrix {
             sr++;
         }
         return sub;
+    }
+
+    public static int cofactor(Matrix matrix, int row, int col) {
+        int minor = Matrix.minor(matrix, row, col);
+        return (row + col) % 2 == 1 ? -minor : minor;
+    }
+
+    public static int minor(Matrix matrix, int row, int col) {
+        Matrix sub = Matrix.submatrix(matrix, row, col);
+        return Matrix.determinant(sub);
+    }
+
+    public static boolean isInvertible(Matrix matrix) {
+        return determinant(matrix) != 0;
+    }
+
+    public static Matrix inverse(Matrix matrix) {
+        if (!isInvertible(matrix)) {
+            System.out.println("Matrix " + matrix + " not invertible!");
+            return null;
+        }
+
+        Matrix m2 = new Matrix(matrix.rows, matrix.cols);
+        for (int row = 0; row < matrix.rows; row++) {
+            for (int col = 0; col < matrix.cols; col++) {
+                int c = cofactor(matrix, row, col);
+                m2.data[col][row] = new BigDecimal(String.valueOf(c / (float) determinant(matrix))).setScale(SCALE, RoundingMode.HALF_EVEN).floatValue();
+            }
+        }
+
+
+        return m2;
     }
 
     public float at(int r, int c) {

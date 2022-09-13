@@ -72,13 +72,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: matrices" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: A submatrix of a 4x4 matrix is a 3x3 matrix" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" />
+      <option name="GLUE" value="com.vvirlan" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="vray" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: matrices" />
+      <option name="NAME_FILTER" value="^A submatrix of a 4x4 matrix is a 3x3 matrix$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^A submatrix of a 4x4 matrix is a 3x3 matrix$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: A submatrix of a 4x4 matrix is a 3x3 matrix" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -90,15 +92,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: A submatrix of a 3x3 matrix is a 2x2 matrix" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Calculating the inverse of a matrix" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" />
       <option name="GLUE" value="com.vvirlan" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="vray" />
-      <option name="NAME_FILTER" value="^A submatrix of a 3x3 matrix is a 2x2 matrix$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^A submatrix of a 3x3 matrix is a 2x2 matrix$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: A submatrix of a 3x3 matrix is a 2x2 matrix" />
+      <option name="NAME_FILTER" value="^Calculating the inverse of a matrix$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Calculating the inverse of a matrix$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Calculating the inverse of a matrix" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -110,15 +112,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Calculating a minor of a 3x3 matrix" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Testing a noninvertible matrix for invertibility" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" />
       <option name="GLUE" value="com.vvirlan" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="vray" />
-      <option name="NAME_FILTER" value="^Calculating a minor of a 3x3 matrix$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Calculating a minor of a 3x3 matrix$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Calculating a minor of a 3x3 matrix" />
+      <option name="NAME_FILTER" value="^Testing a noninvertible matrix for invertibility$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Testing a noninvertible matrix for invertibility$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Testing a noninvertible matrix for invertibility" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -130,15 +132,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Transposing the identity matrix" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Testing an invertible matrix for invertibility" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/com/vvirlan/matrices.feature" />
       <option name="GLUE" value="com.vvirlan" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="vray" />
-      <option name="NAME_FILTER" value="^Transposing the identity matrix$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Transposing the identity matrix$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Transposing the identity matrix" />
+      <option name="NAME_FILTER" value="^Testing an invertible matrix for invertibility$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Testing an invertible matrix for invertibility$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Testing an invertible matrix for invertibility" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -153,10 +155,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.All Features in: vvirlan" />
-        <item itemvalue="Cucumber Java.Scenario: A submatrix of a 3x3 matrix is a 2x2 matrix" />
-        <item itemvalue="Cucumber Java.Feature: matrices" />
-        <item itemvalue="Cucumber Java.Scenario: Calculating a minor of a 3x3 matrix" />
-        <item itemvalue="Cucumber Java.Scenario: Transposing the identity matrix" />
+        <item itemvalue="Cucumber Java.Scenario: Calculating the inverse of a matrix" />
+        <item itemvalue="Cucumber Java.Scenario: A submatrix of a 4x4 matrix is a 3x3 matrix" />
+        <item itemvalue="Cucumber Java.Scenario: Testing a noninvertible matrix for invertibility" />
+        <item itemvalue="Cucumber Java.Scenario: Testing an invertible matrix for invertibility" />
       </list>
     </recent_temporary>
   </component>
@@ -217,25 +219,73 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java</url>
-          <line>20</line>
+          <line>19</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java</url>
-          <line>24</line>
+          <line>23</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java</url>
+          <line>213</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="22" />
+          <line>115</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/vvirlan/MatrixSteps.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="det == 0" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" line="76">
+        <watch expression="row" />
+      </inline-watch>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" line="89">
+        <watch expression="r" />
+      </inline-watch>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" line="89">
+        <watch expression="c" />
+      </inline-watch>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" line="76">
+        <watch expression="col" />
+      </inline-watch>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/main/java/com/vvirlan/model/Matrix.java" line="89">
+        <watch expression="a.data" />
+      </inline-watch>
+    </watches-manager>
   </component>
 </project>

@@ -13,8 +13,7 @@ import java.util.List;
 
 import static com.vvirlan.StepContext.matrices;
 import static com.vvirlan.StepContext.tuples;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MatrixSteps {
 
@@ -168,6 +167,8 @@ public class MatrixSteps {
         Matrix sub = Matrix.submatrix(a, row, col);
         Matrix exp = getMatrix(dataTable);
         assertEquals(exp, sub);
+        assertEquals(rows, sub.rows);
+        assertEquals(cols, sub.cols);
     }
 
     @And("{word} ← submatrix\\({word}, {int}, {int})")
@@ -182,9 +183,44 @@ public class MatrixSteps {
     @And("minor\\({word}, {int}, {int}) = {int}")
     public void minorA(String aKey, int row, int col, int exp) {
         Matrix matrix = matrices.get(aKey);
-        Matrix sub = Matrix.submatrix(matrix,row,col);
-        int det = Matrix.determinant(sub);
-        assertEquals(exp, det);
+        int minor = Matrix.minor(matrix, row, col);
+        assertEquals(exp, minor);
+    }
+
+    @And("cofactor\\({word}, {int}, {int}) = {int}")
+    public void cofactorA(String aKey, int row, int col, int exp) {
+        Matrix matrix = matrices.get(aKey);
+        int cofactor = Matrix.cofactor(matrix, row, col);
+        assertEquals(exp, cofactor);
+    }
+
+    @And("{word} is invertible")
+    public void aIsInvertible(String aKey) {
+        Matrix matrix = matrices.get(aKey);
+        assertTrue(Matrix.isInvertible(matrix));
+
+    }
+
+    @And("{word} is not invertible")
+    public void aIsNotInvertible(String aKey) {
+        Matrix matrix = matrices.get(aKey);
+        assertFalse(Matrix.isInvertible(matrix));
+    }
+
+    @And("{word} ← inverse\\({word})")
+    public void bInverseA(String bKey, String aKey) {
+        Matrix matrix = matrices.get(aKey);
+        Matrix inv = Matrix.inverse(matrix);
+        matrices.put(bKey, inv);
+
+    }
+
+
+    @And("{word} is the following {int}x{int} matrix:")
+    public void bIsTheFollowingXMatrix(String aKey, int rows, int cols, DataTable dataTable) {
+        Matrix a = matrices.get(aKey);
+        Matrix exp = getMatrix(dataTable);
+        assertEquals(exp, a);
 
     }
 }

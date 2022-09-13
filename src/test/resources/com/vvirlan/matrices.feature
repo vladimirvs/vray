@@ -153,3 +153,73 @@ Feature: Matrices
     And B ← submatrix(A, 1, 0)
     Then determinant(B) = 25
     And minor(A, 1, 0) = 25
+
+  Scenario: Calculating a cofactor of a 3x3 matrix
+    Given the following 3x3 matrix A:
+      | 3 | 5  | 0  |
+      | 2 | -1 | -7 |
+      | 6 | -1 | 5  |
+    Then minor(A, 0, 0) = -12
+    And cofactor(A, 0, 0) = -12
+    And minor(A, 1, 0) = 25
+    And cofactor(A, 1, 0) = -25
+
+  Scenario: Calculating the determinant of a 3x3 matrix
+    Given the following 3x3 matrix A:
+      | 1  | 2 | 6  |
+      | -5 | 8 | -4 |
+      | 2  | 6 | 4  |
+    Then cofactor(A, 0, 0) = 56
+    And cofactor(A, 0, 1) = 12
+    And cofactor(A, 0, 2) = -46
+    And determinant(A) = -196
+
+  Scenario: Calculating the determinant of a 4x4 matrix
+    Given the following 4x4 matrix A:
+      | -2 | -8 | 3  | 5  |
+      | -3 | 1  | 7  | 3  |
+      | 1  | 2  | -9 | 6  |
+      | -6 | 7  | 7  | -9 |
+    Then cofactor(A, 0, 0) = 690
+    And cofactor(A, 0, 1) = 447
+    And cofactor(A, 0, 2) = 210
+    And cofactor(A, 0, 3) = 51
+    And determinant(A) = -4071
+
+
+  Scenario: Testing an invertible matrix for invertibility
+    Given the following 4x4 matrix A:
+      | 6 | 4  | 4 | 4  |
+      | 5 | 5  | 7 | 6  |
+      | 4 | -9 | 3 | -7 |
+      | 9 | 1  | 7 | -6 |
+    Then determinant(A) = -2120
+    And A is invertible
+
+
+  Scenario: Testing a noninvertible matrix for invertibility
+    Given the following 4x4 matrix A:
+      | -4 | 2  | -2 | -3 |
+      | 9  | 6  | 2  | 6  |
+      | 0  | -5 | 1  | -5 |
+      | 0  | 0  | 0  | 0  |
+    Then determinant(A) = 0
+    And A is not invertible
+
+  Scenario: Calculating the inverse of a matrix
+    Given the following 4x4 matrix A:
+      | -5 | 2  | 6  | -8 |
+      | 1  | -5 | 1  | 8  |
+      | 7  | 7  | -6 | -7 |
+      | 1  | -3 | 7  | 4  |
+    And B ← inverse(A)
+    Then determinant(A) = 532
+    And cofactor(A, 2, 3) = -160
+    And B[3,2] = -0.30075
+    And cofactor(A, 3, 2) = 105
+    And B[2,3] = 0.19737
+    And B is the following 4x4 matrix:
+      | 0.21805  | 0.45113  | 0.24060  | -0.04511 |
+      | -0.80827 | -1.45677 | -0.44361 | 0.52068  |
+      | -0.07895 | -0.22368 | -0.05263 | 0.19737  |
+      | -0.52256 | -0.81391 | -0.30075 | 0.30639  |
