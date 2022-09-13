@@ -32,10 +32,10 @@ public class Matrix {
         Matrix p = new Matrix(a.rows, a.cols);
         for (int r = 0; r < a.rows; r++) {
             for (int c = 0; c < a.cols; c++) {
-                p.data[r][c] = a.data[r][0] * b.data[0][c] +
+                p.data[r][c] = Math.round(a.data[r][0] * b.data[0][c] +
                         a.data[r][1] * b.data[1][c] +
                         a.data[r][2] * b.data[2][c] +
-                        a.data[r][3] * b.data[3][c];
+                        a.data[r][3] * b.data[3][c]);
             }
         }
         return p;

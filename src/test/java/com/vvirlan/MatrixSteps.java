@@ -111,7 +111,7 @@ public class MatrixSteps {
         assertEquals(new Tuple(x, y, z, w), mul);
     }
 
-    @Then("{word} * identity_matrix = {word}")
+    @Then("{word} * identity_matrix == {word}")
     public void aIdentity_matrixA(String aKey, String bKey) {
         Matrix a = matrices.get(aKey);
         Matrix expected = matrices.get(bKey);
@@ -123,7 +123,7 @@ public class MatrixSteps {
 
     }
 
-    @Then("identity_matrix * {word} = {word}")
+    @Then("identity_matrix * {word} == {word}")
     public void identity_matrixAA(String aKey, String bKey) {
         Tuple a = tuples.get(aKey);
         Matrix identity = Matrix.identity(4);
@@ -221,6 +221,24 @@ public class MatrixSteps {
         Matrix a = matrices.get(aKey);
         Matrix exp = getMatrix(dataTable);
         assertEquals(exp, a);
+
+    }
+
+    @And("{word} ← {word} * {word}")
+    public void cAB(String cKey, String aKey, String bKey) {
+        Matrix a = matrices.get(aKey);
+        Matrix b = matrices.get(bKey);
+        Matrix c = Matrix.mul(a, b);
+        matrices.put(cKey, c);
+
+    }
+
+    @Then("{word} * {word} = {word}")
+    public void pIA(String aKey, String bKey, String cKey) {
+        Matrix a = matrices.get(aKey);
+        Matrix b = matrices.get(bKey);
+        Matrix c = matrices.get(cKey);
+        assertEquals(c, Matrix.mul(a, b));
 
     }
 }
